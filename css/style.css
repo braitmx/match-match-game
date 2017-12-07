@@ -111,10 +111,35 @@ body {
     flex-wrap: wrap;
 }
 
-.game__card {
+.game__card--big {
     width: 11.3%;
     height: 220px;
+}
+
+.game__card--medium {
+    width: 15%;
+    height: 220px;
+}
+
+.game__card--small {
+    width: 18.5%;
+    height: 330px;
+}
+
+.game__card--smile {
     background-image: url(../img/smile-skirts/smile-skirt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.game__card--madagascar {
+    background-image: url(../img/madagascar-skirts/madagascar-skirt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.game__card--tachki {
+    background-image: url(../img/tachki-skirts/tachki-skirt.jpg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
