@@ -3,6 +3,7 @@ body {
     padding: 0;
     background-image: url(../img/bg.jpg);
     background-repeat: no-repeat;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 .menu {
     width: 100%;
@@ -12,7 +13,7 @@ body {
 }
 
 .menu__item {
-    width: 150px;
+    width: 135px;
     height: 36px;
     float: left;
     background: #2ecb70;
@@ -35,21 +36,85 @@ body {
     list-style: none;
     padding: 0;
     margin-top: 11px;
+    position: relative;
+    z-index: 100;
 }
 
 .menu__list-item {
-    width: 150px;
-    height: 100px;
+    width: 100%;
+    height: 65px;
     background: #2ecb70;
     box-sizing: border-box;
+    line-height: 65px;
 }
 
 .menu__list-img {
     padding-top: 7px;
-    width: 85px;
-    height: 85px;
+    width: 50px;
+    height: 50px;
+}
+
+.menu__item-text {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
 }
 
 .active {
     display: block;
+}
+
+.game {
+    width: 95%;
+    height: 730px;
+    background-image: 
+       linear-gradient(to bottom right, 
+        rgba(49,216,236,0.9),
+        rgba(73,222,239,0.9),
+        rgba(127,228,239,0.9),
+        rgba(171,233,240,0.9),
+        rgba(199,236,240,0.9),
+        rgba(234,240,240,0.9));
+    margin: 0 auto;
+    text-align: center;
+}
+
+.game__rules {
+    width: 100%;
+    height: 90%;
+    margin: 0 auto;
+    padding-top: 25px;
+    font-size: 16px;
+    line-height: 2;
+    display: none;
+}
+
+.game__title {
+    margin: 0;
+}
+
+.game__desc {
+    margin: 10px 0;
+}
+
+.game__steps {
+    text-align: left;
+}
+
+.game__field {
+    width: 97%;
+    height: 95%;
+    margin: 0 auto;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.game__card {
+    width: 11.3%;
+    height: 220px;
+    background-image: url(../img/smile-skirts/smile-skirt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
