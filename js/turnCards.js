@@ -1,53 +1,7 @@
-(function () {
+function turnCards(theme) {
     'use strict';
 
-    let arrBlocks = [
-        {
-            name: 'block1',
-            el: "<div id='1' data-theme='red' class='block'></div>",
-            addClass: "red",
-            clicked: false
-        },
-        {
-            name: 'block2',
-            el: "<div id='2' data-theme='green' class='block'></div>",
-            addClass: "green",
-            clicked: false
-        },
-        {
-            name: 'block3',
-            el: "<div id='3' data-theme='red' class='block'></div>",
-            addClass: "red",
-            clicked: false
-        },
-        {
-            name: 'block4',
-            el: "<div id='4' data-theme='green' class='block'></div>",
-            addClass: "green",
-            clicked: false
-        },
-        {
-            name: 'block5',
-            el: "<div id='5' data-theme='red' class='block'></div>",
-            addClass: "red",
-            clicked: false
-        }
-
-    ];
-
-    let area = document.querySelector(".area");
-
-    function renderBlocks() {
-        arrBlocks.forEach(function (item) {
-            let el = item.el;
-
-            area.insertAdjacentHTML("beforeEnd", el);
-        });
-    };
-
-    renderBlocks();
-
-    let elements = document.querySelectorAll('.block');
+    let elements = document.querySelectorAll('.' +theme);
 
     let counter = 0,
         prevCard;
@@ -111,5 +65,5 @@
 
         item.addEventListener('click', toggleCard);
     });
-
-})();
+    
+}

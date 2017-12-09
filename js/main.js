@@ -3,15 +3,20 @@ function ready() {
     let myCardFactory = createCard();
     let cardField = document.querySelector(".game__field");
     let arrCards = [],
+        theme = 'madagascar',
         cardNumber = 24;
 
     for (let i = 0; i < cardNumber; i++) {
         let myCard = myCardFactory.makeCard("big", {
-            theme: 'madagascar'
+            id: i,
+            theme: theme,
+            picture: 'madagascar1'
         });
-        cardField.insertAdjacentHTML("afterBegin", myCard.el);
+        cardField.insertAdjacentHTML("beforeEnd", myCard.el);
         arrCards.push(myCard);
     }
+
+    turnCards(theme);
 }
 
 document.addEventListener("DOMContentLoaded", ready);

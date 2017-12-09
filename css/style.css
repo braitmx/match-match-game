@@ -114,32 +114,52 @@ body {
 .game__card--big {
     width: 11.3%;
     height: 220px;
+    transition: transform 2s linear;
 }
 
 .game__card--medium {
     width: 15%;
     height: 220px;
+    transition: transform 2s linear;
 }
 
 .game__card--small {
     width: 18.5%;
     height: 330px;
+    transition: transform 2s linear;
 }
 
-.game__card--smile {
+.smile {
     background-image: url(../img/smile-skirts/smile-skirt.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.game__card--madagascar {
+.madagascar {
     background-image: url(../img/madagascar-skirts/madagascar-skirt.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.game__card--tachki {
+.tachki {
     background-image: url(../img/tachki-skirts/tachki-skirt.jpg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.madagascar1 {
+    background-image: url(../img/madagascar-skirts/madagascar1.jpg);
+}
+
+.madagascar2 {
+    background-image: url(../img/madagascar-skirts/madagascar2.jpg);
+}
+
+
+.invisble {
+  visibility: hidden;
+}
+
+.rotate {
+  transform: rotate3d(0, 2, 0, 180deg);
 }

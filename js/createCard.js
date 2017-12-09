@@ -1,28 +1,34 @@
 function createCard() {
     function BigCard(name, desc) {
         this.cardType = "big";
-        this.theme = "game__card--" + desc.theme;
+        this.id = desc.id || 0;
+        this.theme = desc.theme;
+        this.picture = desc.picture || '';
         this.size = " game__card--big";
         this.class = desc.class || (this.theme + this.size);
-        this.el = `<div class='${this.class}'></div>`;
+        this.el = `<div id='${this.id}' class='${this.class}' data-theme='${this.picture}'></div>`;
         this.checked = false;
     }
 
     function MediumCard(name, desc) {
         this.cardType = "medium";
+        this.id = desc.id || 0;
         this.theme = desc.theme;
+        this.picture = desc.picture || '';
         this.size = " game__card--medium";
         this.class = desc.class || (this.theme + this.size);
-        this.el = `<div class='${this.class}'></div>`;
+        this.el = `<div id='${this.id}' class='${this.class}' data-theme='${this.picture}'></div>`;
         this.checked = false;
     }
 
     function SmallCard(name, desc) {
         this.cardType = "small";
+        this.id = desc.id || 0;
         this.theme = desc.theme;
+        this.picture = desc.picture || '';
         this.size = " game__card--small";
         this.class = desc.class || (this.theme + this.size);
-        this.el = `<div class='${this.class}'></div>`;
+        this.el = `<div id='${this.id}' class='${this.class}' data-theme='${this.picture}'></div>`;
         this.checked = false;
     }
 
