@@ -115,18 +115,21 @@ body {
     width: 11.3%;
     height: 220px;
     transition: transform 2s linear;
+    border-radius: 5px;
 }
 
 .game__card--medium {
     width: 15%;
     height: 220px;
     transition: transform 2s linear;
+    border-radius: 5px;
 }
 
 .game__card--small {
     width: 18.5%;
     height: 330px;
     transition: transform 2s linear;
+    border-radius: 5px;
 }
 
 .smile {
@@ -155,6 +158,13 @@ body {
     background-image: url(../img/madagascar-skirts/madagascar2.jpg);
 }
 
+.madagascar3 {
+    background-image: url(../img/madagascar-skirts/madagascar3.jpg);
+}
+
+.madagascar4 {
+    background-image: url(../img/madagascar-skirts/madagascar4.jpg);
+}
 
 .invisble {
   visibility: hidden;

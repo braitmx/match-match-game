@@ -56,7 +56,7 @@ function turnCards(theme) {
 
         setTimeout(function () {
             that.addEventListener('click', toggleCard);
-        }, 4000);
+        }, 3000);
 
         prevCard = this;
     }
