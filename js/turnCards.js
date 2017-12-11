@@ -44,7 +44,6 @@ function turnCards(theme) {
                    props[0].classList.add("invisble");
                    props[1].classList.add("invisble");
 
-
                 }.bind(props), 2000);
 
             } else {
@@ -56,7 +55,7 @@ function turnCards(theme) {
 
         setTimeout(function () {
             that.addEventListener('click', toggleCard);
-        }, 3000);
+        }, 3500);
 
         prevCard = this;
     }

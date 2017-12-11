@@ -21,9 +21,11 @@ body {
     text-align: center;
 }
 .menu__title {
+   width: inherit;
+   height: inherit;
+   line-height: 36px;
    color: white;
    font-weight: bold; 
-   padding-top: 9px;
    font-size: 14px;
 }
 
@@ -35,7 +37,7 @@ body {
     display: none;
     list-style: none;
     padding: 0;
-    margin-top: 11px;
+    margin: 0;
     position: relative;
     z-index: 100;
 }
@@ -145,9 +147,25 @@ body {
 }
 
 .tachki {
-    background-image: url(../img/tachki-skirts/tachki-skirt.jpg.jpg);
+    background-image: url(../img/tachki-skirts/tachki-skirt.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.smile1 { 
+    background-image: url(../img/smile-skirts/smile1.jpg);
+}
+
+.smile2 { 
+    background-image: url(../img/smile-skirts/smile2.jpg);
+}
+
+.smile3 { 
+    background-image: url(../img/smile-skirts/smile3.jpg);
+}
+
+.smile4 { 
+    background-image: url(../img/smile-skirts/smile4.jpg);
 }
 
 .madagascar1 {
@@ -165,6 +183,23 @@ body {
 .madagascar4 {
     background-image: url(../img/madagascar-skirts/madagascar4.jpg);
 }
+
+.tachki1 {
+    background-image: url(../img/tachki-skirts/tachki1.jpg);
+}
+
+.tachki2 {
+    background-image: url(../img/tachki-skirts/tachki2.jpg);
+}
+
+.tachki3 {
+    background-image: url(../img/tachki-skirts/tachki3.jpg);
+}
+
+.tachki4 {
+    background-image: url(../img/tachki-skirts/tachki4.jpg);
+}
+
 
 .invisble {
   visibility: hidden;
