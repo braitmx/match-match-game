@@ -1,4 +1,7 @@
 
+let game__rules = document.querySelector(".game__rules"), 
+    game__field = document.querySelector(".game__field");
+
 let menu = document.querySelectorAll(".menu__title"),
     menu__list = document.querySelectorAll(".menu__list"),
     current__menu__list,
@@ -29,6 +32,9 @@ function handleStart() {
 
     if (skirt != '' && difficulty != '') {
 
+        game__rules.classList.toggle('none'); 
+        game__field.classList.toggle('none'); 
+
         closeDropdownMenu(menu__list);
 
         menu__litems.forEach(function (item, i) {
@@ -39,7 +45,7 @@ function handleStart() {
             observable.removeListener(item);
         });
 
-        game(skirt);
+        game(skirt, difficulty);
         
     } else alert('Choose Skirt & Difficulty!');
 }

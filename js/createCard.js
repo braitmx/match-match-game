@@ -1,5 +1,5 @@
 function createCard() {
-    function BigCard(name, desc) {
+    function BigCard(difficulty, desc) {
         this.cardType = "big";
         this.id = desc.id || 0;
         this.theme = desc.theme;
@@ -10,7 +10,7 @@ function createCard() {
         this.checked = false;
     }
 
-    function MediumCard(name, desc) {
+    function MediumCard(difficulty, desc) {
         this.cardType = "medium";
         this.id = desc.id || 0;
         this.theme = desc.theme;
@@ -21,7 +21,7 @@ function createCard() {
         this.checked = false;
     }
 
-    function SmallCard(name, desc) {
+    function SmallCard(difficulty, desc) {
         this.cardType = "small";
         this.id = desc.id || 0;
         this.theme = desc.theme;
@@ -34,15 +34,15 @@ function createCard() {
 
     function CardFactory() { };
 
-    CardFactory.prototype.makeCard = function (name, desc) {
+    CardFactory.prototype.makeCard = function (difficulty, desc) {
         let cardClass = null;
 
-        if (name === "big") cardClass = BigCard;
-        else if (name === "medium") cardClass = MediumCard;
-        else if (name === "small") cardClass = SmallCard;
+        if (difficulty === "hard") cardClass = BigCard;
+        else if (difficulty === "medium") cardClass = MediumCard;
+        else if (difficulty === "easy") cardClass = SmallCard;
         else return false;
 
-        return new cardClass(name, desc);
+        return new cardClass(difficulty, desc);
     }
 
     return new CardFactory();
