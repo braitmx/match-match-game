@@ -2,7 +2,7 @@ function getRandomCards(arrCards, cNumber) {
 
     let ramdomCards = arrCards,
         cardNumber = cNumber,
-        counter1 = cNumber,
+        counter = cNumber,
         cardIndex,
         cardRow = {};
 
@@ -34,11 +34,13 @@ function getRandomCards(arrCards, cNumber) {
 
         if (ramdomCards[cardIndex] < cardRow.cards) {
             ramdomCards[cardIndex] += 1;
-            counter1--;
+            counter--;
+
+            if (cardRow.cards === 5 && counter === 0) (cardIndex === 1) ? cardIndex = 2 : cardIndex = 1
 
             return cardIndex;
 
-        } else if (counter1 > 0) returnCard();
+        } else if (counter > 0) returnCard();
 
         return cardIndex;
     }
