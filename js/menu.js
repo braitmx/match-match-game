@@ -1,22 +1,20 @@
 
-let game__rules = document.querySelector(".game__rules"), 
-    game__field = document.querySelector(".game__field");
+let gameRules = document.querySelector(".game__rules"), 
+    gameField = document.querySelector(".game__field");
 
 let menu = document.querySelectorAll(".menu__title"),
-    menu__list = document.querySelectorAll(".menu__list"),
-    current__menu__list,
-    menu__litems = document.querySelectorAll(".menu__list-item"),
+    menuList = document.querySelectorAll(".menu__list"),
+    currentMenuList,
+    menuListItems = document.querySelectorAll(".menu__list-item"),
     skirt = '',
     difficulty = '';
-
-
 
 function handleMenu(e) {
     e.preventDefault();
 
-    current__menu__list = e.path[1].childNodes[3];
+    currentMenuList = e.path[1].childNodes[3];
 
-    if (current__menu__list !== undefined) current__menu__list.classList.toggle('active');
+    if (currentMenuList !== undefined) currentMenuList.classList.toggle('active');
 };
 
 function handleMenuList() {
@@ -32,12 +30,12 @@ function handleStart() {
 
     if (skirt != '' && difficulty != '') {
 
-        game__rules.classList.toggle('none'); 
-        game__field.classList.toggle('none'); 
+        gameRules.classList.toggle('none'); 
+        gameField.classList.toggle('none'); 
 
-        closeDropdownMenu(menu__list);
+        closeDropdownMenu(menuList);
 
-        menu__litems.forEach(function (item, i) {
+        menuListItems.forEach(function (item, i) {
             observable.removeListener(item);
         });
 
@@ -97,7 +95,7 @@ menu.forEach(function (item, i) {
     else observable.subscribe(item, handleMenu);
 });
 
-menu__litems.forEach(function (item, i) {
+menuListItems.forEach(function (item, i) {
     observable.subscribe(item, handleMenuList);
 });
 

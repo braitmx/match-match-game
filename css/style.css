@@ -115,14 +115,18 @@ body {
 .game__card--big {
     width: 11.3%;
     height: 220px;
-    transition: transform 2s linear;
+    transition: transform 2s linear,
+                opacity 0.8s linear,
+                visibility 1s linear;
     border-radius: 5px;
 }
 
 .game__card--medium {
     width: 11.3%;
     height: 220px;
-    transition: transform 2s linear;
+    transition: transform 2s linear,
+                opacity 0.8s linear,
+                visibility 1s linear;
     border-radius: 5px;
     margin: 0px 20px;
 }
@@ -130,7 +134,9 @@ body {
 .game__card--small {
     width: 17.1%;
     height: 330px;
-    transition: transform 2s linear;
+    transition: transform 2s linear,
+                opacity 0.8s linear,
+                visibility 1s linear;
     border-radius: 5px;
 }
 
@@ -203,6 +209,7 @@ body {
 
 .invisble {
   visibility: hidden;
+  opacity: 0;
 }
 
 .none {

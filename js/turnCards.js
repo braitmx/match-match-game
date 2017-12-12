@@ -37,7 +37,6 @@ function turnCards(theme) {
                 props = [prevCard, thisCard];
 
             if (prevCard.dataset.theme === this.dataset.theme && prevCard.id != this.id) {
-                console.log('done!');
 
                 setTimeout(function () {
 
@@ -55,7 +54,7 @@ function turnCards(theme) {
 
         setTimeout(function () {
             that.addEventListener('click', toggleCard);
-        }, 3500);
+        }, 4100);
 
         prevCard = this;
     }

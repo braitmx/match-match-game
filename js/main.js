@@ -5,7 +5,13 @@ function game(skirt, diff) {
     let cardField = document.querySelector(".game__field"),
         theme = skirt || '',
         difficulty = diff,
-        cardNumber;
+        cardNumber,
+        ramdomCards = [],
+        getCard;
+
+    for (let i = 0; i < 5; i++) {
+        ramdomCards[i] = 0;
+    }
 
     switch (difficulty) {
         case 'easy':
@@ -21,16 +27,14 @@ function game(skirt, diff) {
             cardNumber = 0;
     }
 
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
-    } // картинок не равное число
+    getCard = getRandomCards(ramdomCards, cardNumber);
 
     for (let i = 0; i < cardNumber; i++) {
 
         let myCard = myCardFactory.makeCard(difficulty, {
             id: i,
             theme: theme,
-            picture: theme + getRandomInt(1, 5)
+            picture: theme + getCard()
         });
         cardField.insertAdjacentHTML("beforeEnd", myCard.el);
     }
