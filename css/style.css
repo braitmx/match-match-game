@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(../img/bg.jpg);
-    background-repeat: no-repeat;
+    background: url(../img/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
     font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 .menu {

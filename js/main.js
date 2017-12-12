@@ -36,10 +36,21 @@ function game(skirt, diff) {
             theme: theme,
             picture: theme + getCard()
         });
+
         cardField.insertAdjacentHTML("beforeEnd", myCard.el);
     }
 
-    turnCards(theme);
+
+
+    let gameEnd = function () {
+        return new Promise(function (resolve, reject) {
+            if (document.querySelector(".game__field").children.length === document.querySelectorAll(".invisble").length + 2) {
+                resolve();
+            }
+        });
+    }
+
+    turnCards(theme, gameEnd);
 }
 
 

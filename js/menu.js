@@ -1,5 +1,5 @@
 
-let gameRules = document.querySelector(".game__rules"), 
+let gameRules = document.querySelector(".game__rules"),
     gameField = document.querySelector(".game__field");
 
 let menu = document.querySelectorAll(".menu__title"),
@@ -30,8 +30,8 @@ function handleStart() {
 
     if (skirt != '' && difficulty != '') {
 
-        gameRules.classList.toggle('none'); 
-        gameField.classList.toggle('none'); 
+        gameRules.classList.toggle('none');
+        gameField.classList.toggle('none');
 
         closeDropdownMenu(menuList);
 
@@ -44,7 +44,7 @@ function handleStart() {
         });
 
         game(skirt, difficulty);
-        
+
     } else alert('Choose Skirt & Difficulty!');
 }
 
@@ -90,14 +90,17 @@ Observable.prototype = {
 
 let observable = new Observable();
 
-menu.forEach(function (item, i) {
-    if (item.id === 'start') observable.subscribe(item, handleStart);
-    else observable.subscribe(item, handleMenu);
-});
+function init() {
+    menu.forEach(function (item, i) {
+        if (item.id === 'start') observable.subscribe(item, handleStart);
+        else observable.subscribe(item, handleMenu);
+    });
 
-menuListItems.forEach(function (item, i) {
-    observable.subscribe(item, handleMenuList);
-});
+    menuListItems.forEach(function (item, i) {
+        observable.subscribe(item, handleMenuList);
+    });
+}
 
+init();
 
 
