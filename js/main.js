@@ -42,15 +42,14 @@ function game(skirt, diff) {
 
 
 
-    let gameEnd = function () {
+    let gameEnd = function (cardleft) {
         return new Promise(function (resolve, reject) {
-            if (document.querySelector(".game__field").children.length === document.querySelectorAll(".invisble").length + 2) {
-                resolve();
-            }
+
+                if (cardleft < 2) resolve();
         });
     }
 
-    turnCards(theme, gameEnd);
+    turnCards(theme, cardNumber, gameEnd);
 }
 
 

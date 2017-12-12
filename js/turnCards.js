@@ -1,8 +1,9 @@
-function turnCards(theme, handleEnd) {
+function turnCards(theme, cardNumber, handleEnd) {
     'use strict';
 
     let elements = document.querySelectorAll('.' + theme),
-        gameEnd = handleEnd;
+        gameEnd = handleEnd,
+        cardLeft = cardNumber;
 
     let counter = 0,
         prevCard;
@@ -45,6 +46,8 @@ function turnCards(theme, handleEnd) {
                     props[1].classList.add("invisble");
 
                 }.bind(props), 2000);
+                
+                cardLeft -= 2;
 
             } else {
                 turnCard(prevCard, true);
@@ -52,8 +55,7 @@ function turnCards(theme, handleEnd) {
             }
             counter = 0;
 
-            gameEnd().then(function (result) {
-
+            gameEnd(cardLeft).then(function (result) {
                 setTimeout(function () {
                     alert('Good Job!');
                 }, 2500);
@@ -66,7 +68,6 @@ function turnCards(theme, handleEnd) {
                     gameField.classList.toggle('none');
 
                 }, 3000);
-
 
             });
         }
