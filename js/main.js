@@ -3,6 +3,9 @@ function game(skirt, diff) {
 
     let myCardFactory = createCard();
     let cardField = document.querySelector(".game__field"),
+        timerBlock = document.querySelector(".footer__timer"),
+        timer = 0,
+        isEnd = false,
         theme = skirt || '',
         difficulty = diff,
         cardNumber,
@@ -40,12 +43,33 @@ function game(skirt, diff) {
         cardField.insertAdjacentHTML("beforeEnd", myCard.el);
     }
 
+    function startTimer(timer) {
+        // cardField.children.length >= 2
+        if (!isEnd) {
 
+            timerBlock.innerHTML = '';
+            timerBlock.innerHTML += timer;
+            timer++;
+
+            setTimeout(function () {
+                startTimer(timer);
+            }, 1000);
+        }
+        else timer = 0;
+    }
+    startTimer(timer);
 
     let gameEnd = function (cardleft) {
         return new Promise(function (resolve, reject) {
 
-                if (cardleft < 2) resolve();
+            if (cardleft < 2) {
+                resolve();
+
+                setTimeout(function () {
+                    isEnd = true;
+                }, 2000);
+                
+            }
         });
     }
 

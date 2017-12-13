@@ -46,7 +46,7 @@ function turnCards(theme, cardNumber, handleEnd) {
                     props[1].classList.add("invisble");
 
                 }.bind(props), 2000);
-                
+
                 cardLeft -= 2;
 
             } else {
@@ -67,8 +67,7 @@ function turnCards(theme, cardNumber, handleEnd) {
                     gameRules.classList.toggle('none');
                     gameField.classList.toggle('none');
 
-                }, 3000);
-
+                }, 3000);  
             });
         }
 

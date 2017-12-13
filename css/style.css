@@ -140,6 +140,21 @@ body {
     border-radius: 5px;
 }
 
+.footer {
+    width: 95%;
+    height: 50px;
+    margin: 0 auto;
+    background: #2ecb70;
+}
+
+.footer__timer {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .smile {
     background-image: url(../img/smile-skirts/smile-skirt.jpg);
     background-repeat: no-repeat;
